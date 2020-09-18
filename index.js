@@ -23,7 +23,7 @@ const getPaths = (fromValue, toValue, key, nodes, links) => {
     const to = nodes.find(e => e[key] === toValue) // 根据value及key找到结束节点
 
     const goArrive = (from, to, nodeArr = [], linkArr = []) => { // 寻路函数
-        if (!from) return undefined
+        if (!from || !to) return undefined
         // let obj = {node: from, path: []} // 树型结构
 
         let isArrivable = false // 是否能够到达终点，默认为false
